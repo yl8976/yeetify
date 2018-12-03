@@ -64,18 +64,3 @@ clipboard.on('success', function (e) {
     e.clearSelection();
     document.getElementById("copy-button").innerHTML = "Copied!";
 });
-
-
-// function copy() {
-//     const el = document.createElement('textarea');
-//     el.value = document.getElementById("result").innerHTML;
-//     el.setAttribute('readonly', '');
-//     el.style.position = 'absolute';
-//     el.style.left = '-9999px';
-//     document.body.appendChild(el);
-//     el.select();
-//     document.execCommand('copy');
-//     document.body.removeChild(el);
-//     document.getElementById("copy-button").innerHTML = "Copied!";
-//     
-// }
