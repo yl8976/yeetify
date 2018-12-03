@@ -1,0 +1,16 @@
+*:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#yeetifier {
+	min-width: 200px;
+}
+
+#footer {
+	padding-bottom: 30px;
+}
+
+#result, #result-title, #result-box {
+    display: none;
+}
