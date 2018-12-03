@@ -15,14 +15,20 @@ var clipboard = new ClipboardJS('#copy-button');
 yeetifier.addEventListener("click", function () {
     // Grab input and display box
     var input = document.getElementById("yeet-input").value;
-    document.getElementById("result").style.display = "Inherit";
-    document.getElementById("result-box").style.display = "Inherit";
+    document.getElementById("result").style.display = "block";
+    document.getElementById("result-box").style.display = "block";
 
     // Check for blank inputs
     if (input === "") {
+        // Display error
         document.getElementById("result").innerHTML = "You haven't written anything!";
+
+        // Hide copy button if visible from previous use
+        document.getElementById("copy-button").style.display = "none";
     } else {
+        // Display result and copy button
         document.getElementById("result").innerHTML = input + " YEET";
+        document.getElementById("copy-button").style.display = "inline-flex";
 
         // Read current counter value
         var currentCount = parseInt(counter.innerHTML);
